@@ -43,7 +43,7 @@ namespace concessionaria_classes
                 Console.Write("Preço: ");
                 ex.Cells[cont,6].Value = Console.ReadLine();
                 ex.Cells[cont,7].Value = 0;
-
+                ex.ActiveWorkbook.DisposeChildInstances();
                 ex.ActiveWorkbook.Save();
                 ex.Quit();
                 
@@ -73,6 +73,10 @@ namespace concessionaria_classes
             ex.Quit();
             
             return 0;
+        }
+        public void FUJA(){
+            Program program = new Program();
+            program.Menu();
         }        
     }
 }

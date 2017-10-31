@@ -9,8 +9,12 @@ namespace concessionaria_classes
         static Cliente cliente = new Cliente();
         static Venda venda = new Venda();
         static Carro carro = new Carro();
-        static void Main(string[] args)
+        void Main(string[] args)
         {
+            Menu();
+        }
+
+        public void Menu(){
             string op2;
             ValidarArquivos();
             
@@ -28,12 +32,10 @@ namespace concessionaria_classes
                     case "1": cliente.CadastrarClientes(); break;
                     case "2": carro.CadastrarCarros(); break;
                     case "3": venda.RealizarVendas(); break;
-                    case "4": //venda.VendasDia(); 
-                              break;
+                    case "4": venda.VendasDia(); break;
                 }
             } while (op2 != "0");
         }
-
         static void ValidarArquivos(){
             if(!File.Exists(@"C:\Concessionaria\Cadastro_Cliente.xls")){
                 Application ex = new Application();

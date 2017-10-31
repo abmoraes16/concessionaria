@@ -92,14 +92,17 @@ namespace concessionaria_classes
             do{
                     if(ex.Cells[cont,1].Value.ToString() == docCliente){
                         Console.WriteLine("CPF já cadastrado no sistema!");
-                        
+                        ex.Quit();
                         return cont;
                     }
                 cont++;
             }while(ex.Cells[cont,1].Value!=null);
-            
+            ex.Quit();
             return 0;
         }
-
+        public void FUJA(){
+            Program program = new Program();
+            program.Menu();
+        }
     }
 }

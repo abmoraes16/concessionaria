@@ -31,3 +31,13 @@ c:\Users\Dynamicca\Desktop\concessionaria_classes-master\bin\Debug\netcoreapp2.0
 c:\Users\Dynamicca\Desktop\concessionaria_classes-master\bin\Debug\netcoreapp2.0\concessionaria_classes.runtimeconfig.dev.json
 c:\Users\Dynamicca\Desktop\concessionaria_classes-master\bin\Debug\netcoreapp2.0\concessionaria_classes.dll
 c:\Users\Dynamicca\Desktop\concessionaria_classes-master\bin\Debug\netcoreapp2.0\concessionaria_classes.pdb
+c:\Users\31049529812\Desktop\Back_A\Project_1\concessionaria\bin\Debug\netcoreapp2.0\concessionaria_classes.deps.json
+c:\Users\31049529812\Desktop\Back_A\Project_1\concessionaria\bin\Debug\netcoreapp2.0\concessionaria_classes.runtimeconfig.json
+c:\Users\31049529812\Desktop\Back_A\Project_1\concessionaria\bin\Debug\netcoreapp2.0\concessionaria_classes.runtimeconfig.dev.json
+c:\Users\31049529812\Desktop\Back_A\Project_1\concessionaria\bin\Debug\netcoreapp2.0\concessionaria_classes.dll
+c:\Users\31049529812\Desktop\Back_A\Project_1\concessionaria\bin\Debug\netcoreapp2.0\concessionaria_classes.pdb
+c:\Users\31049529812\Desktop\Back_A\Project_1\concessionaria\obj\Debug\netcoreapp2.0\concessionaria_classes.csproj.CoreCompileInputs.cache
+c:\Users\31049529812\Desktop\Back_A\Project_1\concessionaria\obj\Debug\netcoreapp2.0\concessionaria_classes.AssemblyInfoInputs.cache
+c:\Users\31049529812\Desktop\Back_A\Project_1\concessionaria\obj\Debug\netcoreapp2.0\concessionaria_classes.AssemblyInfo.cs
+c:\Users\31049529812\Desktop\Back_A\Project_1\concessionaria\obj\Debug\netcoreapp2.0\concessionaria_classes.dll
+c:\Users\31049529812\Desktop\Back_A\Project_1\concessionaria\obj\Debug\netcoreapp2.0\concessionaria_classes.pdb

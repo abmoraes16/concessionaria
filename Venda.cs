@@ -14,68 +14,39 @@ namespace concessionaria_classes
         string formaPagamento;
 
             public void VendasDia(){
-
             string op1,data;
-
-
-
             do{
-
                 Console.Write("Digite o dia para pesquisa (DD/MM/AAAA): ");
-
                 data = Console.ReadLine();
-
-                ex.Workbooks.Open(@"C:\Concessionaria\Cadastro_Cliente.xls");
-
-                
-
+                if(data=="FUJA"){
+                    FUJA();
+                }
+                ex.Workbooks.Open(@"C:\Concessionaria\Cadastro_Venda.xls");
                 int cont=1;
-
                 do{
-
-                    if(ex.Cells[cont,3].Value.ToString() == data){
-
-                        Console.WriteLine(ex.Cells[cont,1].Value.ToString()+"\t");
-
-                        Console.WriteLine(ex.Cells[cont,2].Value.ToString()+"\t");
-
-                        Console.WriteLine(ex.Cells[cont,3].Value.ToString()+"\t");
-
-                        Console.WriteLine(ex.Cells[cont,4].Value.ToString()+"\t");
-
+                    if(ex.Cells[cont,3].Value.ToString().Contains(data)){
+                        Console.Write(ex.Cells[cont,1].Value.ToString()+"\t");
+                        Console.Write(ex.Cells[cont,2].Value.ToString()+"\t");
+                        Console.Write(ex.Cells[cont,3].Value.ToString()+"\t");
+                        Console.Write(ex.Cells[cont,4].Value.ToString()+"\t");
                         if(ex.Cells[cont,4].Value.ToString() == "VISTA"){
-
-                            Console.WriteLine(ex.Cells[cont,6].Value.ToString()+"\n");
-
+                            Console.Write(ex.Cells[cont,6].Value.ToString()+"\n");
                         }else{
-
-                            Console.WriteLine(int.Parse(ex.Cells[cont,6].Value.ToString())*int.Parse(ex.Cells[cont,5].Value.ToString())+"\t");
-
+                            double totalvenda = Math.Round(int.Parse(ex.Cells[cont,5].Value.ToString())*double.Parse(ex.Cells[cont,6].Value.ToString()));
+                            Console.Write(totalvenda.ToString()+"\t");
+                            Console.Write(ex.Cells[cont,5].Value.ToString()+"\t");
+                            Console.Write(ex.Cells[cont,6].Value.ToString()+"\n");
                         }
-
                     }
-
                     cont++;
-
                 }while(ex.Cells[cont,1].Value!=null);
-
-
-
-
-
-
-
-            do{
-
-                    Console.Write("\nDeseja realizar um novo cadastro? (S ou N)");
-
-                    op1 = Console.ReadLine();
-
-                } while (op1!="S" && op1!="N" && op1!="s" && op1!="n");
-
-            } while(op1=="S" || op1=="s");
-
-        }
+                ex.Quit();
+                do{
+                        Console.Write("\nDeseja realizar um nova pesquisa? (S ou N)");
+                        op1 = Console.ReadLine();
+                    } while (op1!="S" && op1!="N" && op1!="s" && op1!="n");
+                } while(op1=="S" || op1=="s");
+            }
 
         public void RealizarVendas(){
             int cont=1;
@@ -86,7 +57,10 @@ namespace concessionaria_classes
             int linha;
             double valor = 0;
 
-            ExibeProdutosNaoVendidos();
+            if(ExibeProdutosNaoVendidos()==0){
+                Console.WriteLine("Vá cadastrar alguns carros!");
+                return;
+            }
 
             ex.Workbooks.Open(@"C:\Concessionaria\Cadastro_Carro.xls");
 
@@ -116,7 +90,8 @@ namespace concessionaria_classes
             {
                 Console.Write("Quantidade de Parcelas: ");
                 parcelas = int.Parse(Console.ReadLine());
-                valor = double.Parse(ex.Cells[cont,6].Value.ToString())/parcelas;
+                valor = Math.Round(double.Parse(ex.Cells[cont,6].Value.ToString())/parcelas,2);
+                
             }
             
             do{
@@ -154,25 +129,21 @@ namespace concessionaria_classes
             Console.WriteLine("Venda realizada!");
         }
 
-        public void ExibeProdutosNaoVendidos(){
+        public int ExibeProdutosNaoVendidos(){
             ex.Workbooks.Open(@"C:\Concessionaria\Cadastro_Carro.xls");
-            int cont=1;
+            int cont=1,contdisponivel=0;
 
             do{
                     if(ex.Cells[cont,7].Value.ToString() == "0"){
                         
-                        Console.Write(ex.Cells[cont,1].Value+"\t");
-                        Console.Write(ex.Cells[cont,2].Value+"-");
-                        Console.Write(ex.Cells[cont,3].Value+"\t");
-                        Console.Write(ex.Cells[cont,4].Value+@"\");
-                        Console.Write(ex.Cells[cont,5].Value+"\t");
-                        Console.Write("R$"+ex.Cells[cont,6].Value+"\n");
-
+                        Console.Write(ex.Cells[cont,1].Value+"\t"+ex.Cells[cont,2].Value+"-"+ex.Cells[cont,3].Value+"\t"+ex.Cells[cont,4].Value+@"\"+ex.Cells[cont,5].Value+"\t"+"R$"+ex.Cells[cont,6].Value+"\n");
+                        contdisponivel++;
                     }
                 cont++;
             }while(ex.Cells[cont,1].Value!=null);
 
             ex.Quit();
+            return contdisponivel;
         }
 
         public int ValidarCompra(string placa){
@@ -196,6 +167,10 @@ namespace concessionaria_classes
             //Voltando para posição da placa
             Console.WriteLine("Carro não encontrado!");
             return 0;
+        }
+        public void FUJA(){
+            Program program = new Program();
+            program.Menu();
         }
     }
 }

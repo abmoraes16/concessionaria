@@ -726,30 +726,28 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Dynamicca\\.nuget\\packages\\": {},
+    "C:\\Users\\31049529812\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\Dynamicca\\Desktop\\concessionaria_classes-master\\concessionaria_classes.csproj",
+      "projectUniqueName": "c:\\Users\\31049529812\\Desktop\\Back_A\\Project_1\\concessionaria\\concessionaria_classes.csproj",
       "projectName": "concessionaria_classes",
-      "projectPath": "c:\\Users\\Dynamicca\\Desktop\\concessionaria_classes-master\\concessionaria_classes.csproj",
-      "packagesPath": "C:\\Users\\Dynamicca\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\Dynamicca\\Desktop\\concessionaria_classes-master\\obj\\",
+      "projectPath": "c:\\Users\\31049529812\\Desktop\\Back_A\\Project_1\\concessionaria\\concessionaria_classes.csproj",
+      "packagesPath": "C:\\Users\\31049529812\\.nuget\\packages\\",
+      "outputPath": "c:\\Users\\31049529812\\Desktop\\Back_A\\Project_1\\concessionaria\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Dynamicca\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\31049529812\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
