@@ -18,9 +18,6 @@ namespace concessionaria_classes
             do{
                 Console.Write("Digite o dia para pesquisa (DD/MM/AAAA): ");
                 data = Console.ReadLine();
-                if(data=="FUJA"){
-                    FUJA();
-                }
                 ex.Workbooks.Open(@"C:\Concessionaria\Cadastro_Venda.xls");
                 int cont=1;
                 do{
@@ -167,10 +164,6 @@ namespace concessionaria_classes
             //Voltando para posição da placa
             Console.WriteLine("Carro não encontrado!");
             return 0;
-        }
-        public void FUJA(){
-            Program program = new Program();
-            program.Menu();
         }
     }
 }
