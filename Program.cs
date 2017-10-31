@@ -9,12 +9,13 @@ namespace concessionaria_classes
         static Cliente cliente = new Cliente();
         static Venda venda = new Venda();
         static Carro carro = new Carro();
-        void Main(string[] args)
+        
+        static void Main(string[] args)
         {
             Menu();
         }
 
-        public void Menu(){
+        static void Menu(){
             string op2;
             ValidarArquivos();
             
